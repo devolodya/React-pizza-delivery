@@ -1,6 +1,6 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import List from "./components/List";
+import List from "./components/Shop/List";
 import "./scss/App.scss";
 
 function App() {

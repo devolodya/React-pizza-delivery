@@ -27,10 +27,10 @@
     }
     #pizzaPhoto{
         width: 250px;
-        transform: rotate(-40deg);
+        transform: rotate(-15deg);
             transition: 0.5s ease-out;
         &:hover{
-            transform: rotate(40deg);
+            transform: rotate(15deg);
             transition: 0.5s ease-out;
         }
     }
@@ -50,6 +50,9 @@
         font-size: 14px;
         #pizzaBortHeader{
             color:#505050;
+        }
+        #pizzaCheese{
+            background-color: red;
         }
     }
     #pizzaInfo{
