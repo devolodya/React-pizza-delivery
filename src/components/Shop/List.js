@@ -18,7 +18,6 @@ const List = () => {
   }, []);
   return (
     <>
-      <Sort />
       <div id="listWrapper">
         <div id="list">
           {isLoading
