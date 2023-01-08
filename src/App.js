@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/" element={<List />} />
+        <Route path="/React-pizza-delivery" element={<List />} />
         <Route path="/*" element={<Error />} />
       </Routes>
       <Footer />

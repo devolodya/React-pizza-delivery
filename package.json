@@ -1,7 +1,7 @@
 {
   "name": "todo",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://voltailor.github.io/React-pizza-delivery/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
