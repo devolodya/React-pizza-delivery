@@ -9,9 +9,12 @@ const Cart = () => {
     return (
       <div id="cartContainer">
         <div id="cart">
-          {pizzaSelector.cart.map((item) => (
-            <CartItem key={item.id + Math.random(222)} {...item} />
-          ))}
+          <div id="cartItems">
+            {pizzaSelector.cart.map((item) => (
+              <CartItem key={item.id + Math.random(222)} {...item} />
+            ))}
+          </div>
+          <div id="cartSum">Сума: {pizzaSelector.money} грн</div>
           <button>Замовити</button>
         </div>
       </div>

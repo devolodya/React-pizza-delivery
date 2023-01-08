@@ -19,9 +19,19 @@ const Header = () => {
         </div>
 
         <button onClick={() => dispatch(toggle())}>
-          {pizzaSelector.count === 0
-            ? "Кошик порожній"
-            : `${pizzaSelector.count} шт на суму ${pizzaSelector.money} грн 🡳`}
+          {pizzaSelector.count === 0 ? (
+            <div>
+              Кошик
+              <span class="emptyCount">{pizzaSelector.count}</span>
+            </div>
+          ) : (
+            <div>
+              Кошик
+              <span class="emptyCount notEmptyCount">
+                {pizzaSelector.count}
+              </span>
+            </div>
+          )}
         </button>
         <Cart info={pizzaSelector.cart} />
       </div>

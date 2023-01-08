@@ -2,6 +2,7 @@ import Pizza from "./Pizza";
 import { useState, useEffect } from "react";
 import "../../scss/List.scss";
 import Skeleton from "./Skeleton";
+import Sort from "./Sort";
 
 const List = () => {
   const [items, setItems] = useState([]);
@@ -16,13 +17,16 @@ const List = () => {
       });
   }, []);
   return (
-    <div id="listWrapper">
-      <div id="list">
-        {isLoading
-          ? [...new Array(8)].map((_, index) => <Skeleton key={index} />)
-          : items.map((item) => <Pizza key={item.id} {...item} />)}
+    <>
+      <Sort />
+      <div id="listWrapper">
+        <div id="list">
+          {isLoading
+            ? [...new Array(8)].map((_, index) => <Skeleton key={index} />)
+            : items.map((item) => <Pizza key={item.id} {...item} />)}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
