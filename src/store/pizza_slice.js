@@ -50,7 +50,6 @@ const pizzaSlice = createSlice({
   },
 });
 
-// these exports should stay the way they are
 export const pizzaActions = pizzaSlice.actions;
 export const {
   addItem,

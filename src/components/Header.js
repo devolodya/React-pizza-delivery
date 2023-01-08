@@ -3,7 +3,7 @@ import Cart from "./Cart/Cart";
 import { useSelector, useDispatch } from "react-redux";
 import { toggle } from "../store/cart_slice";
 
-const Header = (props) => {
+const Header = () => {
   const pizzaSelector = useSelector((state) => state.pizzaSlice);
   const dispatch = useDispatch();
 
@@ -21,7 +21,7 @@ const Header = (props) => {
         <button onClick={() => dispatch(toggle())}>
           {pizzaSelector.count === 0
             ? "Кошик порожній"
-            : `${pizzaSelector.count} шт на суму ${pizzaSelector.money} грн 🔽`}
+            : `${pizzaSelector.count} шт на суму ${pizzaSelector.money} грн 🡳`}
         </button>
         <Cart info={pizzaSelector.cart} />
       </div>

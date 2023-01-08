@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import "../../scss/List.scss";
 import Skeleton from "./Skeleton";
 
-const List = (props) => {
+const List = () => {
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
