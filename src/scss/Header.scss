@@ -1,6 +1,7 @@
 header{
     position: fixed;
-    z-index: 2;
+    top: 0;
+    z-index: 1000;
     width: 100%;
     height: 70px;
     display: flex;
@@ -21,8 +22,6 @@ header{
         width: 20px;
     }
     button{
-        position: absolute;
-        right: 10%;
         padding: 10px;
         height: 40px;
         border: none;
@@ -34,6 +33,20 @@ header{
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
+        img{
+            width: 20px;
+            margin-top: auto;
+        }
+    }
+    a{
+        font-size: 15px;
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+        &:hover{
+            color:rgb(116, 116, 116);
+        }
     }
     .emptyCount{
         display: inline-block;
@@ -48,4 +61,53 @@ header{
     .notEmptyCount{
         background-color: red;
     }
-}
+    }
+    .burgerMenu{
+        color: white;
+        background-color: #fff;
+        height: 40px;
+        width: 40px;
+        border-radius: 5px;
+        display: none;
+        cursor: pointer;
+        img{
+            width: 20px;
+            padding: 10px;
+        }
+    }
+    @media(max-width: 900px){
+        a{
+            padding: 5px;
+            font-size: 12px;
+            transition: .2s;
+        }
+    }
+    @media(max-width: 800px){
+        .burgerMenu{
+            display: block;
+            margin-left: 20px;
+            transition: 0.2s;
+        }
+        nav{
+            position: absolute;
+            top: 110%;
+            right: -100%;
+            width: 200px;
+            height: 150px;
+            background-color: #fff;
+            border-radius: 20px;
+            border: 5px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            a{
+                color: black;
+            }
+        }
+        .headerItem2.open{
+            right: 2%;
+            transition: 0.5s;
+        }
+    }
+    

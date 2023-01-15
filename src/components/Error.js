@@ -1,7 +1,14 @@
 import React from "react";
-
+import "../scss/Error.scss";
 const Error = () => {
-  return <div>Сторінку не знайдено</div>;
+  return (
+    <div id="errorPage">
+      <span>Сторінку не знайдено</span>
+      <div id="errorReturn">
+        <a href="/">Повернутись на головну сторінку</a>
+      </div>
+    </div>
+  );
 };
 
 export default Error;

@@ -1,0 +1,32 @@
+@mixin flex{
+    display: flex;
+    align-items: center;
+}
+
+#orderItem{
+    @include flex;
+    width: 60%;
+    height: 200px;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    justify-content: space-around;
+    #orderItemPhoto{
+        @include flex;
+        justify-content: center;
+        width: 180px;
+        height: 180px;
+        img{
+            width: 150px;
+            margin: auto;
+        }
+    }
+    #orderItemName{
+        font-weight: 700;
+        font-size: 20px;
+    }
+    #orderItemDesc{
+        max-width: 300px;
+    }
+}

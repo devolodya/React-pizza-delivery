@@ -8,24 +8,19 @@ import {
   cartCountPlus,
   cartCountMinus,
 } from "../../store/pizza_slice";
-import "../../scss/Pizza.scss";
+import "../../scss/Shop/Pizza.scss";
 
 const Pizza = (props) => {
   const [count, setCount] = useState(Number(props.count));
   const dispatch = useDispatch();
-  // написати зміну ціни залежно від борта
 
   const plus = () => {
     setCount(count + 1);
-    dispatch(addItem(Number(props.price)));
-    dispatch(cartAdd(props));
-    dispatch(cartCountPlus(props));
+    dispatch(addItem(props));
   };
   const minus = () => {
     if (count > 0) setCount(count - 1);
-    dispatch(removeItem(Number(props.price)));
-    if (count === 1) dispatch(cartRemove(props));
-    dispatch(cartCountMinus(props));
+    dispatch(removeItem(props));
   };
   return (
     <div id="pizzaWrapper">

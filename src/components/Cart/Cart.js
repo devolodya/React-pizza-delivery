@@ -1,6 +1,8 @@
 import { useSelector } from "react-redux";
-import "../../scss/Cart.scss";
+import "../../scss/Cart/Cart.scss";
 import CartItem from "./CartItem";
+import { Link } from "react-router-dom";
+
 const Cart = () => {
   const cartSelector = useSelector((state) => state.cartSlice);
   const pizzaSelector = useSelector((state) => state.pizzaSlice);
@@ -15,7 +17,9 @@ const Cart = () => {
             ))}
           </div>
           <div id="cartSum">Сума: {pizzaSelector.money} грн</div>
-          <button>Замовити</button>
+          <button>
+            <Link to="/order">Замовити</Link>
+          </button>
         </div>
       </div>
     );

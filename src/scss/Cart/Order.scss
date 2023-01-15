@@ -1,0 +1,16 @@
+@mixin flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#order{
+    width: 100%;
+    min-height: 100vh;
+    @include flex;
+    flex-direction: column;
+    #confirm{
+        @include flex;
+        flex-direction: column;
+    }
+}

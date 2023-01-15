@@ -1,8 +1,7 @@
 import Pizza from "./Pizza";
 import { useState, useEffect } from "react";
-import "../../scss/List.scss";
+import "../../scss/Shop/List.scss";
 import Skeleton from "./Skeleton";
-import Sort from "./Sort";
 
 const List = () => {
   const [items, setItems] = useState([]);

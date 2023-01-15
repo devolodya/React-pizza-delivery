@@ -4,9 +4,21 @@ footer{
     background-color: black;
     color: white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    bottom: 0;
     img{
         width: 20px;
+    }
+    #author{
+        font-size: 15px;
+    }
+    #links{
+        margin: 20px;
+        padding: 10px;
+        img{
+            padding: 5px;
+        }
     }
 }
