@@ -3,10 +3,12 @@ import Cart from "./Cart/Cart";
 import { useSelector, useDispatch } from "react-redux";
 import { toggle } from "../store/cart_slice";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 
 const Header = () => {
   const pizzaSelector = useSelector((state) => state.pizzaSlice);
   const dispatch = useDispatch();
+  const cartRef = useRef();
 
   const burgerOpen = () => {
     const burgerSelector = document.querySelector(".headerItem2");

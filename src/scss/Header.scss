@@ -110,4 +110,9 @@ header{
             transition: 0.5s;
         }
     }
+@media(max-width: 340px){
+    #headerItem1 a{
+        display: none;
+    }
+}
     
