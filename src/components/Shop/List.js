@@ -3,23 +3,24 @@ import { useState, useEffect } from "react";
 import "../../scss/Shop/List.scss";
 import Skeleton from "./Skeleton";
 import axios from "axios";
+
 const List = () => {
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const getData = async () => {
-    try {
-      const response = await axios(
-        "https://63af1e9c649c73f572b5d1d5.mockapi.io/items"
-      );
-      setItems(response.data);
-      setIsLoading(false);
-    } catch (error) {
-      console.log(error.response);
-    }
-  };
   useEffect(() => {
-    getData();
+    async function GetData() {
+      try {
+        const response = await axios(
+          "https://63af1e9c649c73f572b5d1d5.mockapi.io/items"
+        );
+        setItems(response.data);
+        setIsLoading(false);
+      } catch (error) {
+        console.log(error.response);
+      }
+    }
+    GetData();
   }, []);
 
   return (

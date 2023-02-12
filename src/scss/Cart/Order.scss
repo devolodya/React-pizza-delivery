@@ -13,4 +13,23 @@
         @include flex;
         flex-direction: column;
     }
+    #orderInfo{
+        color: white;
+        font-weight: 700;
+        padding: 20px;
+
+    }
+    button{
+        background-color: rgb(196, 14, 14);
+    color: white;
+    position: relative;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    &:hover{
+        background-color: rgb(99, 7, 7);
+    }
+    }
 }

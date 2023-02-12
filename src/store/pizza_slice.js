@@ -6,6 +6,7 @@ const pizzaSlice = createSlice({
     count: 0,
     money: 0,
     cart: [],
+    firstRender: true,
   },
   reducers: {
     addItem(state, action) {
@@ -34,8 +35,11 @@ const pizzaSlice = createSlice({
       }
     },
   },
+  setRender(state) {
+    if (state.firstRender) state.firstRender = false;
+  },
 });
 
 export const pizzaActions = pizzaSlice.actions;
-export const { addItem, removeItem } = pizzaSlice.actions;
+export const { addItem, removeItem, setRender } = pizzaSlice.actions;
 export default pizzaSlice.reducer;

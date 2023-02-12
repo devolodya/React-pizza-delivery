@@ -12,8 +12,8 @@ const Order = () => {
               <OrderItem key={item.id + Math.random(222)} {...item} />
             ))}
             <div id='confirm'>
-                <span>Сума замовлення: {pizzaSelector.money} грн</span>
-                <button>Замовити</button>
+                <span id='orderInfo'>Сума замовлення: {pizzaSelector.money} грн</span>
+                <button className='orderButton'>Замовити</button>
             </div>
     </div>
   )

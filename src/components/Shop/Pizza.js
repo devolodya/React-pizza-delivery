@@ -11,7 +11,7 @@ import {
 import "../../scss/Shop/Pizza.scss";
 
 const Pizza = (props) => {
-  const [count, setCount] = useState(Number(props.count));
+  const [count, setCount] = useState(props.count);
   const dispatch = useDispatch();
 
   const plus = () => {

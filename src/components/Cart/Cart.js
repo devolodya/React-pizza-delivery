@@ -17,7 +17,9 @@ const Cart = () => {
             ))}
           </div>
           <div id="cartSum">Сума: {pizzaSelector.money} грн</div>
-          <button>{/* <Link to="/order">Замовити</Link> */}</button>
+          <button>
+            <Link to="/order">Замовити</Link>
+          </button>
         </div>
       </div>
     );
